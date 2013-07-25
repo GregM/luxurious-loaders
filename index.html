@@ -14,18 +14,19 @@
     }
 
     .loader-header {
+      font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;;
       background: #ABABAB;
       color: white;
-      padding: 5px;
+      padding: 15px;
     }
 
     .loader-body {
       height: 150px;
-      margin-left: 50%;
       padding: 25px;
+      margin: 10% auto;
     }
 
-    // LOADER 0: wheel
+    /* LOADER 0: wheel */
     .loader-0-body {
       -webkit-animation: loader-0 1s linear infinite;
       border: .5em dotted #ABABAB;
@@ -41,13 +42,14 @@
       }
     }
 
-    // LOADER 1: dots
+    /* LOADER 1: dots */
     .loader-1-body {
       text-align: center;
       font-family: 'Nunito', sans-serif;
-      font-size: 3em;
+      font-size: 5em;
       color: #CDCDCD;
       letter-spacing: 0.01em;
+      margin: 10% auto;
     }
     .loader-1-body span {
       text-shadow: 0px 0px 2px rgba(239,239,239,1);
@@ -62,16 +64,16 @@
       }
     }
     .loader-1-body span:nth-child(1){
-      animation-delay:0s;
+      -webkit-animation-delay:0s;
     }
     .loader-1-body span:nth-child(2){
-      animation-delay:0.30s;
+      -webkit-animation-delay:0.30s;
     }
     .loader-1-body span:nth-child(3){
-      animation-delay:0.60s;
+      -webkit-animation-delay:0.60s;
     }
 
-    // LOADER 2: two eggs
+    /* LOADER 2: two eggs */
     .loader-2-body .loader-first {
       -webkit-animation: loader-2-first 2s linear infinite;
       border: 3px dotted #ABABAB;
@@ -88,9 +90,9 @@
       border: 1px solid red;
       display: block;
     }
-    @keyframes loader-2-first {
+    @-webkit-keyframes loader-2-first {
       100% {
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
       }
     }
     .loader-2-body .loader-second {
@@ -104,11 +106,11 @@
     }
     @-webkit-keyframes loader-2-second {
       100% {
-        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
       }
     }
 
-    // LOADER 3: newton's cradle
+    /* LOADER 3: newton's cradle */
     .loader-3-body {
       position: relative;
     }
@@ -145,7 +147,7 @@
       }
     }
 
-    // LOADER 4: leaves
+    /* LOADER 4: leaves */
     .loader-4-body {
       position: relative;
     }
@@ -162,37 +164,37 @@
       background: rgba(145, 25, 22, 0.9);
       -webkit-transform-origin-y:  0px;
       -webkit-transform-origin-x:  48px;
-      animation-delay: .1s;
+      -webkit-animation-delay: .1s;
     }
     .loader-4-body .dot.three {
       background: rgba(155, 25, 32, 0.9);
       -webkit-transform-origin-y:  18px;
       -webkit-transform-origin-x:  53px;
-      animation-delay: .2s;
+      -webkit-animation-delay: .2s;
     }
     .loader-4-body .dot.four {
       background: rgba(155, 45, 2, 0.9);
       -webkit-transform-origin-y:  12px;
       -webkit-transform-origin-x:  60px;
-      animation-delay: .3s;
+      -webkit-animation-delay: .3s;
     }
     .loader-4-body .dot.five {
       background: rgba(145, 45, 32, 0.9);
       -webkit-transform-origin-y:  30px;
       -webkit-transform-origin-x:  53px;
-      animation-delay: .4s;
+      -webkit-animation-delay: .4s;
     }
     .loader-4-body .dot.six {
       background: rgba(155, 65, 12, 0.9);
       -webkit-transform-origin-y:  28px;
       -webkit-transform-origin-x:  61px;
-      animation-delay: .5s;
+      -webkit-animation-delay: .5s;
     }
     .loader-4-body .dot.seven {
       background: rgba(155, 45, 12, 0.9);
       -webkit-transform-origin-y:  28px;
       -webkit-transform-origin-x:  47px;
-      animation-delay: .6s;
+      -webkit-animation-delay: .6s;
     }
     @-webkit-keyframes loader-4  {
       0% {
@@ -204,7 +206,7 @@
     }
 
 
-    // LOADER 5: gears
+    /* LOADER 5: gears */
     .loader-5-body {
       position: relative;
     }
@@ -215,7 +217,7 @@
     .loader-5-body .dot.two {
       border: 3px dashed #ABABAB;
       background: white;
-      animation-delay: .1s;
+      -webkit-animation-delay: .1s;
       width: 35px;
       height: 35px;
       left: 22px;
@@ -230,7 +232,7 @@
     }
     .loader-5-body .dot.three {
       border: 3px dashed red;
-      animation-delay: .2s;
+      -webkit-animation-delay: .2s;
       width: 17px;
       height: 17px;
       top: -10px;
@@ -260,7 +262,7 @@
       }
     }
 
-    //LOADER 6: dancing circles
+    /* LOADER 6: dancing circles */
     .loader-6-body {
       position: relative;
     }
@@ -269,7 +271,7 @@
       border-radius: 100%;
       border: 2px dotted #ABABAB;
       background: white;
-      animation-delay: .1s;
+      -webkit-animation-delay: .1s;
       width: 75px;
       height: 75px;
       -webkit-animation: loader-6-clockwise 2s infinite linear;
@@ -286,7 +288,7 @@
       border-radius: 100%;
       border: 2px dashed #ABABAB;
       background: #EFEFEF;
-      animation-delay: .1s;
+      -webkit-animation-delay: .1s;
       width: 55px;
       height: 55px;
       top: 9px;
