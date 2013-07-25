@@ -1,0 +1,358 @@
+<!doctype html>  
+<html lang="en">
+	<head>
+	<meta charset="utf-8">	
+	<title>Luxurious Loaders</title>
+	<style type="text/css">
+		html {
+			body: white;
+		}
+		
+		// LOADER 0: wheel
+		.loader-0-body {
+		  animation: load 1s linear infinite;
+		  border: .5em dotted #ABABAB;
+		  border-radius: 50%;
+		  display: block;
+		  height: 1.9em;
+		  width: 1.9em;
+		  margin: 10% auto;
+		}
+		@keyframes loader-0 {
+		  100% {
+		    transform: rotate(360deg);
+		  }
+		}
+		
+		// LOADER 1: dots
+		.loader-1-body {
+		  text-align: center;
+		  font-family: 'Nunito', sans-serif;
+		  font-size: 3em;
+		  color: #CDCDCD;
+		  letter-spacing: 0.01em;
+		}
+		.loader-1-body span { 
+		    text-shadow:
+		      0px 0px 2px rgba(239,239,239,1);
+		  animation: loader-1 0.90s ease-in-out infinite alternate;
+		}
+		@keyframes loader-1 {
+		  from {
+		    opacity: 0.2;
+		  }
+			to {
+		    opacity: 1.0;
+		  }
+		}
+		.loader-1-body span:nth-child(1){
+		  animation-delay:0s;
+		}
+		.loader-1-body span:nth-child(2){
+		  animation-delay:0.30s;
+		}
+		.loader-1-body span:nth-child(3){
+		  animation-delay:0.60s;
+		}
+		
+		// LOADER 2: two eggs
+		.loader-2-body .loader-first {
+		  animation: loader-2-first 2s linear infinite;
+		  border: 3px dotted #ABABAB;
+		  border-radius: 50%;
+		  display: block;
+		  height: 4.4em;
+		  width: 3.2em;
+		  margin: 10% auto;
+		}
+		.loader-2-body .loader-first:after {
+		  width: 5px;
+		  height: 5px;
+		  color: blue;
+		  border: 1px solid red;
+		  display: block;
+		}
+
+		@keyframes loader-2-first {
+		  100% {
+		    transform: rotate(360deg);
+		  }
+		}
+		.loader-2-body .loader-second {
+		  animation: loader-2-second 1s linear infinite;
+		  border: 3px dotted #CDCDCD;
+		  border-radius: 50%;
+		  display: block;
+		  height: 4.4em;
+		  width: 3.2em;
+		  margin: 10% auto;
+		}
+		@keyframes loader-2-second {
+		  100% {
+		    transform: rotate(-360deg);
+		  }
+		}
+		
+		// LOADER 3: newton's cradle
+		.loader-3-body .dot {
+		  width: 6px;
+		  height: 6px;
+		  background: #ABABAB;
+		  position: absolute;
+		  border-radius: 100%;
+		  left: 22px;
+		  top: 2px;
+		}
+		.loader-3-body .dot.two {
+		  -webkit-transform-origin-y:  63px;
+		  -webkit-animation: dot 1.6s infinite ease-in-out;
+		}
+		.loader-3-body .dot.stack-one {
+		  left: 28px;
+		}
+		.loader-3-body .dot.stack-two {
+		  left: 16px;
+		}
+		@-webkit-keyframes dot {
+		  0% {
+		    -webkit-transform: rotateZ(0deg);
+		  }
+		  100% {
+		    -webkit-transform: rotateZ(360deg);
+		  }
+		}
+		
+		// LOADER 4: leaves
+		.loader-4-body .dot {
+		  width: 16px;
+		  height: 6px;
+		  position: absolute;
+		  border-radius: 100%;
+		  left: 22px;
+		  top: 2px;
+			-webkit-animation: loader-4 1.6s infinite linear;
+		}
+		.loader-4-body .dot.two {
+		  background: rgba(145, 25, 22, 0.9);
+		  -webkit-transform-origin-y:  12px;
+		  -webkit-transform-origin-x:  48px;
+		  animation-delay: .1s;
+		}
+		.loader-4-body .dot.three {
+		  background: rgba(155, 25, 32, 0.9);
+		  -webkit-transform-origin-y:  18px;
+		  -webkit-transform-origin-x:  53px;
+		  animation-delay: .2s;
+		}
+		.loader-4-body .dot.four {
+		  background: rgba(155, 45, 2, 0.9);
+		  -webkit-transform-origin-y:  12px;
+		  -webkit-transform-origin-x:  60px;
+		  animation-delay: .3s;
+		}
+		.loader-4-body .dot.five {
+		  background: rgba(145, 45, 32, 0.9);
+		  -webkit-transform-origin-y:  30px;
+		  -webkit-transform-origin-x:  53px;
+		  animation-delay: .4s;
+		}
+		.loader-4-body .dot.six {
+		  background: rgba(155, 65, 12, 0.9);
+		  -webkit-transform-origin-y:  28px;
+		  -webkit-transform-origin-x:  61px;
+		  animation-delay: .5s;
+		}
+		.loader-4-body .dot.seven {
+		  background: rgba(155, 45, 12, 0.9);
+		  -webkit-transform-origin-y:  28px;
+		  -webkit-transform-origin-x:  47px;
+		  animation-delay: .6s;
+		}
+		@-webkit-keyframes loader-4  {
+		  0% {
+		    -webkit-transform: rotateZ(0deg);
+		  }
+		  100% {
+		    -webkit-transform: rotateZ(360deg);
+		  }
+		}
+		
+		
+		// LOADER 5: gears
+		.loader-5-body .dot {
+		  position: absolute;
+		  border-radius: 100%;
+		}
+		.loader-5-body .dot.two {
+		  border: 3px dashed #ABABAB;
+		  background: white;
+		  animation-delay: .1s;
+		  width: 35px;
+		  height: 35px;
+		  left: 22px;
+		  top: 2px;
+		  -webkit-animation: loader-5-body-counter-clockwise 1s infinite linear;
+		}
+		.loader-5-body .dot.two .background-filler {
+		  background: rgba(0, 0, 0, 0.4);
+		  width: 35px;
+		  height: 35px;
+		  border-radius: 100%;
+		}
+		.loader-5-body .dot.three {
+		  border: 3px dashed red;
+		  animation-delay: .2s;
+		  width: 17px;
+		  height: 17px;
+		  top: -10px;
+		  left: 10px;
+		  -webkit-animation: loader-5-body-clockwise .5s infinite linear;
+		}
+		.loader-5-body .dot.three .background-filler {
+		  background: rgba(255, 25, 25, 0.9);
+		  width: 17px;
+		  height: 17px;
+		  border-radius: 100%;
+		}
+		@-webkit-keyframes loader-5-body-counter-clockwise {
+		  0% {
+		    -webkit-transform: rotateZ(0deg);
+		  }
+		  100% {
+		    -webkit-transform: rotateZ(-360deg);
+		  }
+		}
+		@-webkit-keyframes loader-5-body-clockwise {
+		  0% {
+		    -webkit-transform: rotateZ(0deg);
+		  }
+		  100% {
+		    -webkit-transform: rotateZ(360deg);
+		  }
+		}
+		
+		//LOADER 6: dancing circles
+		.loader-6-body .spinner-big {
+		  position: absolute;
+		  border-radius: 100%;
+		  border: 2px dotted #ABABAB;
+		  background: white;
+		  animation-delay: .1s;
+		  width: 75px;
+		  height: 75px;
+		  -webkit-animation: loader-6-clockwise 2s infinite linear;
+		  -webkit-transform-origin-y: 135px;
+		}
+		.loader-6-body .spinner-big-filler {
+		  background: #ABABAB;
+		  width: 74px;
+		  height: 74px;
+		  border-radius: 100%;
+		}
+		.loader-6-body .spinner-small {
+		  position: absolute;
+		  border-radius: 100%;
+		  border: 2px dashed #ABABAB;
+		  background: #EFEFEF;
+		  animation-delay: .1s;
+		  width: 55px;
+		  height: 55px;
+		  top: 9px;
+		  left: 3px;
+		  -webkit-animation: loader-6-counter-clockwise 3s infinite linear;
+		  -webkit-transform-origin-y: 135px;
+		}
+		@-webkit-keyframes loader-6-counter-clockwise {
+		  0% {
+		    -webkit-transform: rotateY(0deg);
+		  }
+		  100% {
+		    -webkit-transform: rotateZ(-360deg);
+		  }
+		}
+
+		@-webkit-keyframes loader-6-clockwise {
+		  0% {
+		    -webkit-transform: rotateY(0deg);
+		  }
+		  100% {
+		    -webkit-transform: rotateY(360deg);
+		  }
+		}
+	</style>
+		
+	</head>
+	<body>
+		<div class="loader-0">
+			<div class="loader-header">Wheel</div>
+			<div class="loader-0-body"></div>
+		</div>
+		<div class="loader-1">
+			<div class="loader-header">Three Dots</div>
+			<div class="loader-1-body">
+				<span>&bull;</span>
+			  <span>&bull;</span>
+			  <span>&bull;</span>
+			</div>
+		</div>
+		<div class="loader-2">
+			<div class="loader-header">Two Eggs</div>
+			<div class="loader-2-body">
+				<span class="loader-first">
+				  <span class="loader-second"></span>
+				</span>
+			</div>
+		</div>
+		<div class="loader-3">
+			<div class="loader-header">Newton's Cradle</div>
+			<div class="loader-3-body">
+				<div class="dot one"></div>
+			  <div class="dot two"></div>
+			  <div class="dot stack-one"></div>
+			  <div class="dot stack-two"></div>
+			</div>
+		</div>
+		<div class="loader-4">
+			<div class="loader-header">
+				<div class="loader-header">Leaves</div>
+				<div class="loader-4-body">
+					<div class="dot two"></div>
+				  <div class="dot three"></div>
+				  <div class="dot four"></div>
+				  <div class="dot five"></div>
+				  <div class="dot six"></div>
+				  <div class="dot seven"></div>
+				</div>
+			</div>
+		</div>
+		<div class="loader-5">
+			<div class="loader-header">Gears</div>
+			<div class="loader-5-body">
+				<div class="dot two">
+			    <div class="background-filler"></div>
+			  </div>
+			  <div class="dot three">
+			    <div class="background-filler"></div>
+			  </div>
+			</div>
+		</div>
+		<div class="loader-6">
+			<div class="loader-header">Dancing Circles</div>
+			<div class="loader-6-body">
+				<div class="spinner-big">
+			    <div class="spinner-big-filler"></div>
+			    <div class="spinner-small"></div>
+			  </div>
+			</div>
+		</div>
+		<div class="loader-7">
+			<div class="loader-header"></div>
+		</div>
+		<div class="loader-8">
+			<div class="loader-header"></div>
+		</div>
+		<div class="loader-9">
+			<div class="loader-header"></div>
+		</div>
+	</body>
+</html>
