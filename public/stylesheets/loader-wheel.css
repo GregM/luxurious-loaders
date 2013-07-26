@@ -1,0 +1,14 @@
+.loader-0-body {
+  -webkit-animation: loader-0 1s linear infinite;
+  border: .5em dotted #ABABAB;
+  border-radius: 50%;
+  display: block;
+  height: 1.9em;
+  width: 1.9em;
+  margin: 10% auto;
+}
+@-webkit-keyframes loader-0 {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
