@@ -1,3 +1,7 @@
+.loader-2-body {
+  position: relative;
+  width: 75px;
+}
 .loader-2-body .loader-first {
   -webkit-animation: loader-2-first 2s linear infinite;
   border: 3px dotted #ABABAB;
@@ -5,7 +9,6 @@
   display: block;
   height: 4.4em;
   width: 3.2em;
-  margin: 10% auto;
 }
 .loader-2-body .loader-first:after {
   width: 5px;

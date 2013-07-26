@@ -1,5 +1,6 @@
 .loader-3-body {
   position: relative;
+  width: 50px;
 }
 .loader-3-body .dot {
   width: 6px;
