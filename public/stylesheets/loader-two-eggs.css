@@ -1,0 +1,35 @@
+.loader-2-body .loader-first {
+  -webkit-animation: loader-2-first 2s linear infinite;
+  border: 3px dotted #ABABAB;
+  border-radius: 50%;
+  display: block;
+  height: 4.4em;
+  width: 3.2em;
+  margin: 10% auto;
+}
+.loader-2-body .loader-first:after {
+  width: 5px;
+  height: 5px;
+  color: blue;
+  border: 1px solid red;
+  display: block;
+}
+@-webkit-keyframes loader-2-first {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.loader-2-body .loader-second {
+  -webkit-animation: loader-2-second 1s linear infinite;
+  border: 3px dotted #CDCDCD;
+  border-radius: 50%;
+  display: block;
+  height: 4.4em;
+  width: 3.2em;
+  margin: 10% auto;
+}
+@-webkit-keyframes loader-2-second {
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}

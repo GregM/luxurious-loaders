@@ -1,0 +1,54 @@
+.loader-5-body {
+  position: relative;
+}
+.loader-5-body .dot {
+  position: relative;
+  border-radius: 100%;
+}
+.loader-5-body .dot.two {
+  border: 3px dashed #ABABAB;
+  background: white;
+  -webkit-animation-delay: .1s;
+  width: 35px;
+  height: 35px;
+  left: 22px;
+  top: 2px;
+  -webkit-animation: loader-5-body-counter-clockwise 1s infinite linear;
+}
+.loader-5-body .dot.two .background-filler {
+  background: rgba(0, 0, 0, 0.4);
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+.loader-5-body .dot.three {
+  border: 3px dashed red;
+  -webkit-animation-delay: .2s;
+  width: 17px;
+  height: 17px;
+  top: -10px;
+  left: 10px;
+  -webkit-animation: loader-5-body-clockwise .5s infinite linear;
+}
+.loader-5-body .dot.three .background-filler {
+  background: rgba(255, 25, 25, 0.9);
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+}
+@-webkit-keyframes loader-5-body-counter-clockwise {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+  }
+}
+@-webkit-keyframes loader-5-body-clockwise {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}

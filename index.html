@@ -1,320 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <meta charset="utf-8">
-  <title>Luxurious Loaders</title>
-  <style type="text/css">
-    html {
-      body: white;
-    }
-
-    .loader-wrapper {
-      margin: 0 auto;
-      border: 1px solid #EFEFEF;
-    }
-
-    .loader-header {
-      font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;;
-      background: #ABABAB;
-      color: white;
-      padding: 15px;
-    }
-
-    .loader-body {
-      height: 150px;
-      padding: 25px;
-      margin: 10% auto;
-    }
-
-    /* LOADER 0: wheel */
-    .loader-0-body {
-      -webkit-animation: loader-0 1s linear infinite;
-      border: .5em dotted #ABABAB;
-      border-radius: 50%;
-      display: block;
-      height: 1.9em;
-      width: 1.9em;
-      margin: 10% auto;
-    }
-    @-webkit-keyframes loader-0 {
-      100% {
-        -webkit-transform: rotate(360deg);
+    <meta charset="utf-8">
+    <title>Luxurious Loaders</title>
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/loader-wheel.css" />
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/loader-three-dots.css" />
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/loader-two-eggs.css" />
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/loader-newtons-cradle.css" />
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/loader-fall-leaves.css" />
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/loader-gears.css" />
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/loader-dancing-circles.css" />
+    <style type="text/css">
+      html {
+        body: white;
       }
-    }
-
-    /* LOADER 1: dots */
-    .loader-1-body {
-      text-align: center;
-      font-family: 'Nunito', sans-serif;
-      font-size: 5em;
-      color: #CDCDCD;
-      letter-spacing: 0.01em;
-      margin: 10% auto;
-    }
-    .loader-1-body span {
-      text-shadow: 0px 0px 2px rgba(239,239,239,1);
-      -webkit-animation: loader-1 0.90s ease-in-out infinite alternate;
-    }
-    @-webkit-keyframes loader-1 {
-      from {
-        opacity: 0.2;
+      .loader-wrapper {
+        margin: 0 auto;
+        border: 1px solid #EFEFEF;
       }
-      to {
-        opacity: 1.0;
+      .loader-header {
+        font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;;
+        background: #ABABAB;
+        color: white;
+        padding: 15px;
       }
-    }
-    .loader-1-body span:nth-child(1){
-      -webkit-animation-delay:0s;
-    }
-    .loader-1-body span:nth-child(2){
-      -webkit-animation-delay:0.30s;
-    }
-    .loader-1-body span:nth-child(3){
-      -webkit-animation-delay:0.60s;
-    }
-
-    /* LOADER 2: two eggs */
-    .loader-2-body .loader-first {
-      -webkit-animation: loader-2-first 2s linear infinite;
-      border: 3px dotted #ABABAB;
-      border-radius: 50%;
-      display: block;
-      height: 4.4em;
-      width: 3.2em;
-      margin: 10% auto;
-    }
-    .loader-2-body .loader-first:after {
-      width: 5px;
-      height: 5px;
-      color: blue;
-      border: 1px solid red;
-      display: block;
-    }
-    @-webkit-keyframes loader-2-first {
-      100% {
-        -webkit-transform: rotate(360deg);
+      .loader-body {
+        padding: 25px;
+        margin: 10% auto;
       }
-    }
-    .loader-2-body .loader-second {
-      -webkit-animation: loader-2-second 1s linear infinite;
-      border: 3px dotted #CDCDCD;
-      border-radius: 50%;
-      display: block;
-      height: 4.4em;
-      width: 3.2em;
-      margin: 10% auto;
-    }
-    @-webkit-keyframes loader-2-second {
-      100% {
-        -webkit-transform: rotate(-360deg);
-      }
-    }
-
-    /* LOADER 3: newton's cradle */
-    .loader-3-body {
-      position: relative;
-    }
-    .loader-3-body .dot {
-      width: 6px;
-      height: 6px;
-      background: #ABABAB;
-      position: relative;
-      border-radius: 100%;
-      left: 22px;
-      top: 2px;
-    }
-    .loader-3-body .dot.one {
-      top: 8px;
-    }
-    .loader-3-body .dot.two {
-      -webkit-transform-origin-y:  63px;
-      -webkit-animation: dot 1.6s infinite ease-in-out;
-    }
-    .loader-3-body .dot.stack-one {
-      left: 28px;
-      top: -4px;
-    }
-    .loader-3-body .dot.stack-two {
-      left: 16px;
-      top: -10px;
-    }
-    @-webkit-keyframes dot {
-      0% {
-        -webkit-transform: rotateZ(0deg);
-      }
-      100% {
-        -webkit-transform: rotateZ(360deg);
-      }
-    }
-
-    /* LOADER 4: leaves */
-    .loader-4-body {
-      position: relative;
-    }
-    .loader-4-body .dot {
-      width: 16px;
-      height: 6px;
-      position: absolute;
-      border-radius: 100%;
-      left: 22px;
-      top: 2px;
-      -webkit-animation: loader-4 1.6s infinite linear;
-    }
-    .loader-4-body .dot.two {
-      background: rgba(145, 25, 22, 0.9);
-      -webkit-transform-origin-y:  0px;
-      -webkit-transform-origin-x:  48px;
-      -webkit-animation-delay: .1s;
-    }
-    .loader-4-body .dot.three {
-      background: rgba(155, 25, 32, 0.9);
-      -webkit-transform-origin-y:  18px;
-      -webkit-transform-origin-x:  53px;
-      -webkit-animation-delay: .2s;
-    }
-    .loader-4-body .dot.four {
-      background: rgba(155, 45, 2, 0.9);
-      -webkit-transform-origin-y:  12px;
-      -webkit-transform-origin-x:  60px;
-      -webkit-animation-delay: .3s;
-    }
-    .loader-4-body .dot.five {
-      background: rgba(145, 45, 32, 0.9);
-      -webkit-transform-origin-y:  30px;
-      -webkit-transform-origin-x:  53px;
-      -webkit-animation-delay: .4s;
-    }
-    .loader-4-body .dot.six {
-      background: rgba(155, 65, 12, 0.9);
-      -webkit-transform-origin-y:  28px;
-      -webkit-transform-origin-x:  61px;
-      -webkit-animation-delay: .5s;
-    }
-    .loader-4-body .dot.seven {
-      background: rgba(155, 45, 12, 0.9);
-      -webkit-transform-origin-y:  28px;
-      -webkit-transform-origin-x:  47px;
-      -webkit-animation-delay: .6s;
-    }
-    @-webkit-keyframes loader-4  {
-      0% {
-        -webkit-transform: rotateZ(0deg);
-      }
-      100% {
-        -webkit-transform: rotateZ(360deg);
-      }
-    }
-
-
-    /* LOADER 5: gears */
-    .loader-5-body {
-      position: relative;
-    }
-    .loader-5-body .dot {
-      position: relative;
-      border-radius: 100%;
-    }
-    .loader-5-body .dot.two {
-      border: 3px dashed #ABABAB;
-      background: white;
-      -webkit-animation-delay: .1s;
-      width: 35px;
-      height: 35px;
-      left: 22px;
-      top: 2px;
-      -webkit-animation: loader-5-body-counter-clockwise 1s infinite linear;
-    }
-    .loader-5-body .dot.two .background-filler {
-      background: rgba(0, 0, 0, 0.4);
-      width: 35px;
-      height: 35px;
-      border-radius: 100%;
-    }
-    .loader-5-body .dot.three {
-      border: 3px dashed red;
-      -webkit-animation-delay: .2s;
-      width: 17px;
-      height: 17px;
-      top: -10px;
-      left: 10px;
-      -webkit-animation: loader-5-body-clockwise .5s infinite linear;
-    }
-    .loader-5-body .dot.three .background-filler {
-      background: rgba(255, 25, 25, 0.9);
-      width: 17px;
-      height: 17px;
-      border-radius: 100%;
-    }
-    @-webkit-keyframes loader-5-body-counter-clockwise {
-      0% {
-        -webkit-transform: rotateZ(0deg);
-      }
-      100% {
-        -webkit-transform: rotateZ(-360deg);
-      }
-    }
-    @-webkit-keyframes loader-5-body-clockwise {
-      0% {
-        -webkit-transform: rotateZ(0deg);
-      }
-      100% {
-        -webkit-transform: rotateZ(360deg);
-      }
-    }
-
-    /* LOADER 6: dancing circles */
-    .loader-6-body {
-      position: relative;
-    }
-    .loader-6-body .spinner-big {
-      position: absolute;
-      border-radius: 100%;
-      border: 2px dotted #ABABAB;
-      background: white;
-      -webkit-animation-delay: .1s;
-      width: 75px;
-      height: 75px;
-      -webkit-animation: loader-6-clockwise 2s infinite linear;
-      -webkit-transform-origin-y: 135px;
-    }
-    .loader-6-body .spinner-big-filler {
-      background: #ABABAB;
-      width: 74px;
-      height: 74px;
-      border-radius: 100%;
-    }
-    .loader-6-body .spinner-small {
-      position: absolute;
-      border-radius: 100%;
-      border: 2px dashed #ABABAB;
-      background: #EFEFEF;
-      -webkit-animation-delay: .1s;
-      width: 55px;
-      height: 55px;
-      top: 9px;
-      left: 3px;
-      -webkit-animation: loader-6-counter-clockwise 3s infinite linear;
-      -webkit-transform-origin-y: 135px;
-    }
-    @-webkit-keyframes loader-6-counter-clockwise {
-      0% {
-        -webkit-transform: rotateY(0deg);
-      }
-      100% {
-        -webkit-transform: rotateZ(-360deg);
-      }
-    }
-
-    @-webkit-keyframes loader-6-clockwise {
-      0% {
-        -webkit-transform: rotateY(0deg);
-      }
-      100% {
-        -webkit-transform: rotateY(360deg);
-      }
-    }
-  </style>
-
+    </style>
   </head>
   <body>
     <div class="loader-0 loader-wrapper">
