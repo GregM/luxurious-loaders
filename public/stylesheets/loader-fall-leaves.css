@@ -1,0 +1,57 @@
+.loader-4-body {
+  position: relative;
+  width: 100px;
+}
+.loader-4-body .dot {
+  width: 16px;
+  height: 6px;
+  position: absolute;
+  border-radius: 100%;
+  left: 22px;
+  top: 2px;
+  -webkit-animation: loader-4 1.6s infinite linear;
+}
+.loader-4-body .dot.two {
+  background: rgba(145, 25, 22, 0.9);
+  -webkit-transform-origin-y:  0px;
+  -webkit-transform-origin-x:  48px;
+  -webkit-animation-delay: .1s;
+}
+.loader-4-body .dot.three {
+  background: rgba(155, 25, 32, 0.9);
+  -webkit-transform-origin-y:  18px;
+  -webkit-transform-origin-x:  53px;
+  -webkit-animation-delay: .2s;
+}
+.loader-4-body .dot.four {
+  background: rgba(155, 45, 2, 0.9);
+  -webkit-transform-origin-y:  12px;
+  -webkit-transform-origin-x:  60px;
+  -webkit-animation-delay: .3s;
+}
+.loader-4-body .dot.five {
+  background: rgba(145, 45, 32, 0.9);
+  -webkit-transform-origin-y:  30px;
+  -webkit-transform-origin-x:  53px;
+  -webkit-animation-delay: .4s;
+}
+.loader-4-body .dot.six {
+  background: rgba(155, 65, 12, 0.9);
+  -webkit-transform-origin-y:  28px;
+  -webkit-transform-origin-x:  61px;
+  -webkit-animation-delay: .5s;
+}
+.loader-4-body .dot.seven {
+  background: rgba(155, 45, 12, 0.9);
+  -webkit-transform-origin-y:  28px;
+  -webkit-transform-origin-x:  47px;
+  -webkit-animation-delay: .6s;
+}
+@-webkit-keyframes loader-4  {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}

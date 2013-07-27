@@ -1,0 +1,36 @@
+.loader-3-body {
+  position: relative;
+  width: 50px;
+}
+.loader-3-body .dot {
+  width: 6px;
+  height: 6px;
+  background: #ABABAB;
+  position: relative;
+  border-radius: 100%;
+  left: 22px;
+  top: 2px;
+}
+.loader-3-body .dot.one {
+  top: 8px;
+}
+.loader-3-body .dot.two {
+  -webkit-transform-origin-y:  63px;
+  -webkit-animation: dot 1.6s infinite ease-in-out;
+}
+.loader-3-body .dot.stack-one {
+  left: 28px;
+  top: -4px;
+}
+.loader-3-body .dot.stack-two {
+  left: 16px;
+  top: -10px;
+}
+@-webkit-keyframes dot {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
